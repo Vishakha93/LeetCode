@@ -1,0 +1,118 @@
+/*
+*
+* Count primes in a given subtree
+*/
+
+#include <iostream>
+#include <vector>
+using namespace std;
+ 
+vector<bool> visited(100005, false);
+vector<int> v[100005];
+int count[100005];
+ 
+bool isPrime(int num)
+{
+     int i, cnt = 0;
+     for(i=2; i < num; i++)
+     {
+         if (num % i == 0)
+         {
+              cnt++;
+         }
+     }
+     if(cnt > 1)
+     {
+         return false;
+     }
+ 
+    return true;
+}
+int dfs(int node, vector<int>& values)
+{
+    visited[node] = true;
+    int i, sum  = 0, primeChildCount;
+    if(isPrime(values[node-1]))
+    {
+        sum++;
+    }
+ 
+    for(i=0; i<v[node].size(); i++)
+    {
+        vector<int>::iterator it;
+ 
+        if(visited[v[node][i]] == false)
+        {
+            primeChildCount = dfs(v[node][i], values);
+            sum = sum + primeChildCount;
+        }
+    }
+    count[node] = sum;
+    return sum;
+}
+vector<int> primeQuery(int n, vector<int>& first, vector<int>& second, vector<int>& values, vector<int>& queries)
+{
+    int i;
+    vector<int> res;
+    int m = first.size();
+    for(i=0; i<m;i++)
+    {
+        v[first[i]].push_back(second[i]);
+        v[second[i]].push_back(first[i]);
+    }
+ 
+    dfs(1, values);
+ 
+    for(i=0; i<queries.size(); i++)
+    {
+        res.push_back(count[queries[i]]);
+    }
+ 
+    for(i=0; i<res.size(); i++)
+    {
+        printf("%d ", res[i]);
+    }
+    printf("\n");
+    return res;
+}
+ 
+int main()
+{
+    int n, m, i, x, q;
+    vector<int> first;
+    vector<int> second;
+    vector<int> values;
+    vector<int> queries;
+ 
+    scanf("%d",&n);
+    scanf("%d", &m);
+ 
+    for(i=0; i<m; i++)
+    {
+        scanf("%d", &x);
+        first.push_back(x);
+    }
+ 
+    for(i=0; i<m; i++)
+    {
+        scanf("%d", &x);
+        second.push_back(x);
+    }
+ 
+    for(i=0; i<=m; i++)
+    {
+        scanf("%d", &x);
+        values.push_back(x);
+    }
+ 
+    scanf("%d", &q);
+    for(i=0; i<q; i++)
+    {
+        scanf("%d", &x);
+        queries.push_back(x);
+    }
+ 
+    primeQuery(n, first, second, values, queries);
+ 
+    return 0;
+}

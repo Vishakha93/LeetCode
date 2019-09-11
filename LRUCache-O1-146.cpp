@@ -5,6 +5,20 @@ private:
     map<int, list<int>::iterator> mp;
     map<int, int> cache;
     
+    void updateLRU(int key) {
+        if (mp.count(key) != 0) {
+            lru.erase(mp[key]);
+        }
+        lru.push_front(key);
+        mp[key] = lru.begin();
+    }
+    
+    void evict() {
+        cache.erase(lru.back());
+        mp.erase(lru.back());
+        lru.pop_back();
+    }
+    
 public:
     LRUCache(int capacity) {
         this->capacity = capacity;
@@ -24,21 +38,6 @@ public:
         }
         updateLRU(key);
         cache[key] = value;
-    }
-    
-    
-    void updateLRU(int key) {
-        if (mp.count(key) != 0) {
-            lru.erase(mp[key]);
-        }
-        lru.push_front(key);
-        mp[key] = lru.begin();
-    }
-    
-    void evict() {
-        cache.erase(lru.back());
-        mp.erase(lru.back());
-        lru.pop_back();
     }
 };
 

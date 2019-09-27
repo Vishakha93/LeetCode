@@ -8,7 +8,7 @@ NP Hard
 
 ### Eulerian Path
 Eulerian Path is a path in graph that visits every edge exactly once. Eulerian Circuit is an Eulerian Path which starts and ends on the same vertex.
-Solvable in O(V+E)
+Solvable in O(V+E). Just another variation of topological sorting [Reconstruct Itinerary](https://leetcode.com/problems/reconstruct-itinerary/)
 
 ### Articulation Points
 A vertex in an undirected connected graph is an articulation point (or cut vertex) iff removing it (and edges through it) disconnects the graph. For a disconnected undirected graph, an articulation point is a vertex removing which increases number of connected components.

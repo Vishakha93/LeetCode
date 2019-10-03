@@ -1,5 +1,6 @@
 class LRUCache {
 private:
+    
     int capacity;
     list<int> lru;
     map<int, list<int>::iterator> mp;

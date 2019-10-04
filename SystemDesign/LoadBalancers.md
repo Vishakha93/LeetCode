@@ -9,9 +9,9 @@ We can add LBs at 3 places
 
 Benefits of Load Balancing
 
-Users - Experience faster(higher throuput) and uninteruppted(less downtime) service. Users won't have to wait for a single server to finish its previous tasks.
-Organization - Smart LBs provide predict traffic bottlenecks which are about to happen, providing actionable insights
-System Admins - Experience fewer failed and stressed components
+* Users - Experience faster(higher throuput) and uninteruppted(less downtime) service. Users won't have to wait for a single server to finish its previous tasks.
+* Organization - Smart LBs provide predict traffic bottlenecks which are about to happen, providing actionable insights
+* System Admins - Experience fewer failed and stressed components
 
 
 

@@ -1,4 +1,4 @@
-Load Balancer improves the availability and responsiveness of an application by
+Load Balancer improves the scalability(horizontal scaling), availability and responsiveness of an application by
 1. Distributing the traffic
 2. Track status of servers. Stop sending traffic to server which has elevated error rate or is not responding.
 

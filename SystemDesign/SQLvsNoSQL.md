@@ -32,4 +32,16 @@ Example - CouchDB and MongoDB
 Any cheap commodity hardware or cloud instances can host NoSQL Db, Can distribute data across servers automatically
 * ACID(Atomicity, Consistency, Isolation, Durability) Compliancy - Provides data reliability and safe gurantee of performing transactions vs Provides scalabilty and performance
 
+## Reasons to use SQL DB
+* When you have to ensure ACID Compliance -  ACID reduces anomalies and protects integrity of data. E-Commerce and Financial Applications
+* When your data is structured and unchangin - If business is not experiencing massive growth that would require more servers, then no need to build a system which supports high traffic volume
+
+## Reasons to use NoSQL DB
+* Storing large volume of data that have no structure. New types can be added easily.
+* Making the most of computing and storage. Cloud based solutions are cost-effective. 
+NoSQl databases like Cassandra are designed to be scaled across multiple servers, out of the box
+* Rapid Development - NoSQL DBs do not require any preparation. If you are planning for quick iterations and it will involve changes to data structure often without a lot of downtime, NoSQL is better.
+
+
+
 

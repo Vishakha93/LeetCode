@@ -11,11 +11,3 @@ What steps can you perform to troubleshoot an application?
    i) Web Server Logs - May be firewall issue
    ii) Application Server/Service Logs - May be some special character in file reading is failing, 3rd party services are failing, 
    iii) Database Logs - May be transaction logs are full, may be lot of exclusive locks, may be a long stored proc is running
-   
-What components should you have in order to keep your service up and running?
-
-1. Load Balancers
-2. Metric Dashboards - Latency, Throughput in your code
-3. Registered Health Checks for all 3rd party dependency, database dependency
-4. API Rate Limiter
-5. 

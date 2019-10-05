@@ -38,3 +38,9 @@ Cons - Risk of data loss in case of crash
 ### Cache Eviction Policies
 FIFO, LIFO, LRU, MRU (Most Recently Used), LFU, RR(Random Replacement)
 
+### Examples
+Reladomo has an object cache. In case of partial cache, it will cache its results using soft references.
+If you know, you must go to the database, you can bypass the cache
+FooList list = new FooList(someOp);
+list.setBypassCache(true);
+

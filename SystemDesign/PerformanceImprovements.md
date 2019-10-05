@@ -1,13 +1,13 @@
 Components in an efficient distributed system
 
 1. Load Balancers
+2. Have alert framework - Fabric Alert whenever performance of a system goes down
 2. Metric Dashboards - Latency, Throughput in your code
 3. Health Checks - For all 3rd party dependency, database dependency
 4. API Rate Limiter
 5. Caching
 6. Data Partitioning
 7. Indexes
-
 
 What is DB performance is not satisfactory?
 * Caching

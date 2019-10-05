@@ -39,8 +39,14 @@ Cons - Risk of data loss in case of crash
 FIFO, LIFO, LRU, MRU (Most Recently Used), LFU, RR(Random Replacement)
 
 ### Examples
-Reladomo has an object cache. In case of partial cache, it will cache its results using soft references.
+Reladomo has an write-through object cache. It gurantees that cache will always be updated in a transaction.
+It supports 2 types of Caches
+
+1. Full Cache -> This is for tiny static tables. If you make changes in such tables, you will have to restart the app.
+2. Partial Cache -> Reladomo will not have re-read the same object over and over again. Once fetched in a transaction is enough. It will cache its results using soft references.
 If you know, you must go to the database, you can bypass the cache
 FooList list = new FooList(someOp);
 list.setBypassCache(true);
+
+
 

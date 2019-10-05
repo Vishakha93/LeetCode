@@ -5,7 +5,7 @@ index = hashfunction(key)
 
 ##### Intuitive Hash Function = Key%n
 Drawbacks
-1. If a new server is added, all existing mappings are broken, needs downtime and remapping
+1. If a new server is added, all existing mappings are broken, needs downtime and remapping -> NOT Horizontally Scalable
 2. Keys may not be uniformly distributed. Some servers - hot and saturated while others - idle and empty
 
 ##### Choose Good Hash Function

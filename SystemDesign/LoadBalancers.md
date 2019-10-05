@@ -13,6 +13,12 @@ Benefits of Load Balancing
 * Organization - Smart LBs provide predict traffic bottlenecks which are about to happen, providing actionable insights
 * System Admins - Experience fewer failed and stressed components
 
+LBs only forward traffic to healthy backend servers. Different LB algorithms -
+1. Least Connection Method - Direct traffic to the server with fewest active connections. Useful when there are large number of persistant connections
+
+2. Least Response Time Method - Direct traffic to server with fewest active connections and lowest average response time.
+
+3. Least Bandwidth Method - This method selects
 
 
 

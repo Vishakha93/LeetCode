@@ -3,7 +3,10 @@
 * Ex - For a library catalog to search books by author and by title, we will create 2 index - one on title, other on author column
 * Can be created using 
   * Ordered Map <column to be indexed, row pointer> - Will take O(lg(n)) to search as its sorted
-  * B+ Tree better as you don't have to sort everytime you add a new record
+  * B+ Tree better as you don't have to sort everytime you add a new record. Height is lg(n)
+    * M
+    * (D,H)                                      (Q, T, X)
+    * (B,C) (F, G) (J, K, L)                     (N, P)   (R, S)   (V, W)   (Y, Z)
 
 * Lead to decrease in write performance - While insert, update and delete, we not only have to write the data, but also update the index.
 Thus not needed for write heavy applications.
